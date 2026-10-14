@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="560" viewBox="0 0 860 560" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="860" height="560" fill="white"/>
+<text x="430.0" y="32" font-size="20" text-anchor="middle" font-weight="bold">Utilizacion media de CPU vs numero de unidades</text>
+<line x1="90" y1="490.0" x2="670" y2="490.0" stroke="#e6e6e6"/>
+<text x="80" y="494.0" font-size="12" text-anchor="end">0</text>
+<line x1="90" y1="447.0" x2="670" y2="447.0" stroke="#e6e6e6"/>
+<text x="80" y="451.0" font-size="12" text-anchor="end">100</text>
+<line x1="90" y1="404.0" x2="670" y2="404.0" stroke="#e6e6e6"/>
+<text x="80" y="408.0" font-size="12" text-anchor="end">200</text>
+<line x1="90" y1="361.0" x2="670" y2="361.0" stroke="#e6e6e6"/>
+<text x="80" y="365.0" font-size="12" text-anchor="end">300</text>
+<line x1="90" y1="318.0" x2="670" y2="318.0" stroke="#e6e6e6"/>
+<text x="80" y="322.0" font-size="12" text-anchor="end">400</text>
+<line x1="90" y1="275.0" x2="670" y2="275.0" stroke="#e6e6e6"/>
+<text x="80" y="279.0" font-size="12" text-anchor="end">500</text>
+<line x1="90" y1="232.0" x2="670" y2="232.0" stroke="#e6e6e6"/>
+<text x="80" y="236.0" font-size="12" text-anchor="end">600</text>
+<line x1="90" y1="189.0" x2="670" y2="189.0" stroke="#e6e6e6"/>
+<text x="80" y="193.0" font-size="12" text-anchor="end">700</text>
+<line x1="90" y1="146.0" x2="670" y2="146.0" stroke="#e6e6e6"/>
+<text x="80" y="150.0" font-size="12" text-anchor="end">800</text>
+<line x1="90" y1="103.0" x2="670" y2="103.0" stroke="#e6e6e6"/>
+<text x="80" y="107.0" font-size="12" text-anchor="end">900</text>
+<line x1="90" y1="60.0" x2="670" y2="60.0" stroke="#e6e6e6"/>
+<text x="80" y="64.0" font-size="12" text-anchor="end">1000</text>
+<line x1="124.1" y1="60" x2="124.1" y2="490" stroke="#f0f0f0"/>
+<text x="124.1" y="510" font-size="12" text-anchor="middle">1</text>
+<line x1="158.2" y1="60" x2="158.2" y2="490" stroke="#f0f0f0"/>
+<text x="158.2" y="510" font-size="12" text-anchor="middle">2</text>
+<line x1="226.5" y1="60" x2="226.5" y2="490" stroke="#f0f0f0"/>
+<text x="226.5" y="510" font-size="12" text-anchor="middle">4</text>
+<line x1="294.7" y1="60" x2="294.7" y2="490" stroke="#f0f0f0"/>
+<text x="294.7" y="510" font-size="12" text-anchor="middle">6</text>
+<line x1="362.9" y1="60" x2="362.9" y2="490" stroke="#f0f0f0"/>
+<text x="362.9" y="510" font-size="12" text-anchor="middle">8</text>
+<line x1="431.2" y1="60" x2="431.2" y2="490" stroke="#f0f0f0"/>
+<text x="431.2" y="510" font-size="12" text-anchor="middle">10</text>
+<line x1="499.4" y1="60" x2="499.4" y2="490" stroke="#f0f0f0"/>
+<text x="499.4" y="510" font-size="12" text-anchor="middle">12</text>
+<line x1="567.6" y1="60" x2="567.6" y2="490" stroke="#f0f0f0"/>
+<text x="567.6" y="510" font-size="12" text-anchor="middle">14</text>
+<line x1="635.9" y1="60" x2="635.9" y2="490" stroke="#f0f0f0"/>
+<text x="635.9" y="510" font-size="12" text-anchor="middle">16</text>
+<line x1="90" y1="60" x2="90" y2="490" stroke="#333"/>
+<line x1="90" y1="490" x2="670" y2="490" stroke="#333"/>
+<text x="380" y="536" font-size="14" text-anchor="middle">Numero de hilos / procesos (unidades)</text>
+<text x="22" y="275" font-size="14" text-anchor="middle" transform="rotate(-90 22 275)">CPU utilizada (%)</text>
+<polyline points="124.1,488.8 158.2,489.4 226.5,489.7 362.9,489.8 499.4,489.8 635.9,489.9" fill="none" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="124.1" y1="488.8" x2="124.1" y2="488.8" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="124.1" cy="488.8" r="3.5" fill="#1f77b4"/>
+<line x1="158.2" y1="489.4" x2="158.2" y2="489.4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="158.2" cy="489.4" r="3.5" fill="#1f77b4"/>
+<line x1="226.5" y1="489.7" x2="226.5" y2="489.7" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="226.5" cy="489.7" r="3.5" fill="#1f77b4"/>
+<line x1="362.9" y1="489.8" x2="362.9" y2="489.8" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="362.9" cy="489.8" r="3.5" fill="#1f77b4"/>
+<line x1="499.4" y1="489.8" x2="499.4" y2="489.8" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="499.4" cy="489.8" r="3.5" fill="#1f77b4"/>
+<line x1="635.9" y1="489.9" x2="635.9" y2="489.8" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="635.9" cy="489.9" r="3.5" fill="#1f77b4"/>
+<polyline points="124.1,488.8 158.2,489.4 226.5,489.7 362.9,489.8 499.4,489.8 635.9,489.9" fill="none" stroke="#d62728" stroke-width="2.5"/>
+<line x1="124.1" y1="488.8" x2="124.1" y2="488.8" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="124.1" cy="488.8" r="3.5" fill="#d62728"/>
+<line x1="158.2" y1="489.4" x2="158.2" y2="489.4" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="158.2" cy="489.4" r="3.5" fill="#d62728"/>
+<line x1="226.5" y1="489.7" x2="226.5" y2="489.7" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="226.5" cy="489.7" r="3.5" fill="#d62728"/>
+<line x1="362.9" y1="489.8" x2="362.9" y2="489.8" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="362.9" cy="489.8" r="3.5" fill="#d62728"/>
+<line x1="499.4" y1="489.8" x2="499.4" y2="489.8" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="499.4" cy="489.8" r="3.5" fill="#d62728"/>
+<line x1="635.9" y1="489.9" x2="635.9" y2="489.9" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="635.9" cy="489.9" r="3.5" fill="#d62728"/>
+<line x1="688" y1="80" x2="718" y2="80" stroke="#1f77b4" stroke-width="2.5"/>
+<text x="726" y="84" font-size="13">Hilos pthread</text>
+<line x1="688" y1="106" x2="718" y2="106" stroke="#d62728" stroke-width="2.5"/>
+<text x="726" y="110" font-size="13">Procesos fork</text>
+</svg>

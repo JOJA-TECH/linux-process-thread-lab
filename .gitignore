@@ -1,0 +1,19 @@
+# Binarios compilados (se regeneran con `make`)
+/bin/
+*.o
+*.out
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Trazas binarias grandes de perf (regenerables; peso ~45 MB)
+resultados/*.data
+resultados/*.data.old
+
+# Editores y sistema operativo
+*.swp
+.DS_Store
+
+# Temporales
+*.tmp

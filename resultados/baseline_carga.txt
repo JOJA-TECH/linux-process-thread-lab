@@ -1,0 +1,19 @@
+Intervalo: 5.0 s   ticks_totales=6090
+CPU ocupada (todas las LPs) = 17.13 %   ->  ~2.06 de 12 LPs
+CPU ociosa                  = 82.87 %
+loadavg: 5.34 6.69 4.31 2/1742 17450
+
+Top 12 consumidores de CPU (ps):
+  COMMAND         %CPU
+  ps               200
+  opencode         104
+  cosmic-comp     18.6
+  zen             18.6
+  Isolated Web Co 13.2
+  mpvpaper         7.8
+  Isolated Web Co  5.2
+  Isolated Web Co  3.0
+  kswapd0          2.4
+  kitty            2.2
+  kworker/u48:1-c  0.7
+  python3          0.7
