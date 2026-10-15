@@ -1,204 +1,208 @@
 ############################################################
 ### secuencial (1 unidad)
-### cmd: ./bin/secuencial 800000000
+### cmd: python3 src/secuencial.py 3000000
 ############################################################
-RESULT mode=secuencial units=1 logical_cpus=12 total_iters=800000000 wall_s=3.720293 cpu_s=3.681848 util_pct=98.97 checksum=5016696464481751843
+RESULT mode=secuencial units=1 logical_cpus=12 total_iters=3000000 wall_s=3.271134 cpu_s=3.237828 util_pct=98.98 checksum=14414186446203882457
 
- Performance counter stats for './bin/secuencial 800000000':
+ Performance counter stats for 'python3 src/secuencial.py 3000000':
 
-     5.611.564.310      cycles:u                                                              
-    11.200.132.484      instructions:u                                                        
-       800.031.819      branches:u                                                            
-             8.762      branch-misses:u                                                       
-            63.235      cache-references:u                                                    
-            15.731      cache-misses:u                                                        
+     6.764.489.940      cycles:u                                                              
+    17.918.694.650      instructions:u                                                        
+     3.416.989.115      branches:u                                                            
+        12.526.035      branch-misses:u                                                       
+        11.801.951      cache-references:u                                                    
+         2.455.955      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          3.719,28 msec task-clock:u                                                          
+          3.309,73 msec task-clock:u                                                          
 
-       3,722869079 seconds time elapsed
+       3,319426723 seconds time elapsed
 
-       3,681518000 seconds user
-       0,002959000 seconds sys
+       3,266947000 seconds user
+       0,017590000 seconds sys
 
 
 
 ############################################################
 ### hilos 1
-### cmd: ./bin/hilos_pthread 800000000 1
+### cmd: python3 src/hilos_threading.py 3000000 1
 ############################################################
-RESULT mode=hilos_pthread units=1 logical_cpus=12 total_iters=800000000 wall_s=2.746078 cpu_s=2.723084 util_pct=99.16 checksum=5016696464481751843
+RESULT mode=hilos_threading units=1 logical_cpus=12 total_iters=3000000 wall_s=3.274572 cpu_s=3.246384 util_pct=99.14 checksum=14414186446203882457
 
- Performance counter stats for './bin/hilos_pthread 800000000 1':
+ Performance counter stats for 'python3 src/hilos_threading.py 3000000 1':
 
-     5.625.675.006      cycles:u                                                              
-    10.400.141.012      instructions:u                                                        
-       800.035.316      branches:u                                                            
-            11.490      branch-misses:u                                                       
-            67.469      cache-references:u                                                    
-            20.952      cache-misses:u                                                        
+     6.758.784.317      cycles:u                                                              
+    17.898.960.876      instructions:u                                                        
+     3.410.545.728      branches:u                                                            
+        13.142.017      branch-misses:u                                                       
+        12.896.476      cache-references:u                                                    
+         2.540.006      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          2.746,72 msec task-clock:u                                                          
+          3.308,48 msec task-clock:u                                                          
 
-       2,748434538 seconds time elapsed
+       3,311269145 seconds time elapsed
 
-       2,724465000 seconds user
-       0,000987000 seconds sys
+       3,264909000 seconds user
+       0,017738000 seconds sys
 
 
 
 ############################################################
 ### hilos 4
-### cmd: ./bin/hilos_pthread 800000000 4
+### cmd: python3 src/hilos_threading.py 3000000 4
 ############################################################
-RESULT mode=hilos_pthread units=4 logical_cpus=12 total_iters=800000000 wall_s=0.732490 cpu_s=2.810470 util_pct=383.69 checksum=4314293330488784900
+RESULT mode=hilos_threading units=4 logical_cpus=12 total_iters=3000000 wall_s=3.416561 cpu_s=3.443834 util_pct=100.80 checksum=6753946891414406104
 
- Performance counter stats for './bin/hilos_pthread 800000000 4':
+ Performance counter stats for 'python3 src/hilos_threading.py 3000000 4':
 
-     5.800.157.430      cycles:u                                                              
-    10.400.144.204      instructions:u                                                        
-       800.033.499      branches:u                                                            
-             8.771      branch-misses:u                                                       
-            67.711      cache-references:u                                                    
-            33.082      cache-misses:u                                                        
+     6.640.177.006      cycles:u                                                              
+    17.900.821.762      instructions:u                                                        
+     3.410.937.040      branches:u                                                            
+        13.402.511      branch-misses:u                                                       
+        15.188.475      cache-references:u                                                    
+         3.661.284      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          2.852,10 msec task-clock:u                                                          
+          3.541,32 msec task-clock:u                                                          
 
-       0,736287559 seconds time elapsed
+       3,464932833 seconds time elapsed
 
-       2,809295000 seconds user
-       0,004894000 seconds sys
+       3,374886000 seconds user
+       0,113779000 seconds sys
 
 
 
 ############################################################
 ### hilos 8
-### cmd: ./bin/hilos_pthread 800000000 8
+### cmd: python3 src/hilos_threading.py 3000000 8
 ############################################################
-RESULT mode=hilos_pthread units=8 logical_cpus=12 total_iters=800000000 wall_s=0.453640 cpu_s=2.971924 util_pct=655.13 checksum=14461307954345427537
+RESULT mode=hilos_threading units=8 logical_cpus=12 total_iters=3000000 wall_s=3.307712 cpu_s=3.402640 util_pct=102.87 checksum=5168058987271470167
 
- Performance counter stats for './bin/hilos_pthread 800000000 8':
+ Performance counter stats for 'python3 src/hilos_threading.py 3000000 8':
 
-     6.117.630.391      cycles:u                                                              
-    10.400.154.406      instructions:u                                                        
-       800.036.520      branches:u                                                            
-             8.964      branch-misses:u                                                       
-            53.651      cache-references:u                                                    
-            21.365      cache-misses:u                                                        
+     6.425.067.370      cycles:u                                                              
+    18.176.216.000      instructions:u                                                        
+     3.448.984.675      branches:u                                                            
+         4.271.803      branch-misses:u                                                       
+        15.943.084      cache-references:u                                                    
+         3.894.763      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          3.000,50 msec task-clock:u                                                          
+          3.500,65 msec task-clock:u                                                          
 
-       0,456267701 seconds time elapsed
+       3,348092699 seconds time elapsed
 
-       2,963737000 seconds user
-       0,010749000 seconds sys
+       3,272263000 seconds user
+       0,169679000 seconds sys
 
 
 
 ############################################################
 ### hilos 12
-### cmd: ./bin/hilos_pthread 800000000 12
+### cmd: python3 src/hilos_threading.py 3000000 12
 ############################################################
-RESULT mode=hilos_pthread units=12 logical_cpus=12 total_iters=800000000 wall_s=0.404315 cpu_s=2.964235 util_pct=733.15 checksum=18414268772342709515
+RESULT mode=hilos_threading units=12 logical_cpus=12 total_iters=3000000 wall_s=3.340401 cpu_s=3.475364 util_pct=104.04 checksum=994035908659169943
 
- Performance counter stats for './bin/hilos_pthread 800000000 12':
+ Performance counter stats for 'python3 src/hilos_threading.py 3000000 12':
 
-     6.067.744.749      cycles:u                                                              
-    10.400.164.148      instructions:u                                                        
-       800.039.266      branches:u                                                            
-            10.386      branch-misses:u                                                       
-            76.805      cache-references:u                                                    
-            32.658      cache-misses:u                                                        
+     6.439.174.003      cycles:u                                                              
+    18.005.107.984      instructions:u                                                        
+     3.424.087.721      branches:u                                                            
+         8.490.894      branch-misses:u                                                       
+        20.548.065      cache-references:u                                                    
+         4.086.557      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          3.003,09 msec task-clock:u                                                          
+          3.578,03 msec task-clock:u                                                          
 
-       0,407227745 seconds time elapsed
+       3,378122734 seconds time elapsed
 
-       2,931771000 seconds user
-       0,035455000 seconds sys
+       3,322336000 seconds user
+       0,190203000 seconds sys
 
 
 
 ############################################################
 ### hilos 16
-### cmd: ./bin/hilos_pthread 800000000 16
+### cmd: python3 src/hilos_threading.py 3000000 16
 ############################################################
-RESULT mode=hilos_pthread units=16 logical_cpus=12 total_iters=800000000 wall_s=0.376722 cpu_s=2.979888 util_pct=791.00 checksum=16404114876640175641
+RESULT mode=hilos_threading units=16 logical_cpus=12 total_iters=3000000 wall_s=3.322755 cpu_s=3.502019 util_pct=105.40 checksum=7950303407621870926
 
- Performance counter stats for './bin/hilos_pthread 800000000 16':
+ Performance counter stats for 'python3 src/hilos_threading.py 3000000 16':
 
-     6.083.251.840      cycles:u                                                              
-    10.400.173.805      instructions:u                                                        
-       800.041.887      branches:u                                                            
-            11.411      branch-misses:u                                                       
-            85.013      cache-references:u                                                    
-            36.014      cache-misses:u                                                        
+     6.433.324.865      cycles:u                                                              
+    18.005.394.063      instructions:u                                                        
+     3.424.173.373      branches:u                                                            
+         8.927.116      branch-misses:u                                                       
+        18.410.581      cache-references:u                                                    
+         4.266.876      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          3.019,79 msec task-clock:u                                                          
+          3.604,55 msec task-clock:u                                                          
 
-       0,380127295 seconds time elapsed
+       3,360591329 seconds time elapsed
 
-       2,949496000 seconds user
-       0,033766000 seconds sys
+       3,313870000 seconds user
+       0,225470000 seconds sys
 
 
 
 ############################################################
 ### procesos 4
-### cmd: ./bin/procesos_fork 800000000 4
+### cmd: python3 src/procesos_fork.py 3000000 4
 ############################################################
-[fork] hijo pid=7491 iters=200000000 checksum=18307653480770699442
-[fork] hijo pid=7489 iters=200000000 checksum=3089575991617100877
-[fork] hijo pid=7490 iters=200000000 checksum=4553461609537683016
-[fork] hijo pid=7488 iters=200000000 checksum=14996968004848212659
-RESULT mode=procesos_fork units=4 logical_cpus=12 total_iters=800000000 wall_s=0.703755 cpu_s=2.748687 util_pct=390.57 checksum=4314293330488784900
+[fork] hijo pid=15263 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=15261 iters=750000 checksum=66683840669113584
+[fork] hijo pid=15260 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=15262 iters=750000 checksum=17353596016291576862
+RESULT mode=procesos_fork units=4 logical_cpus=12 total_iters=3000000 wall_s=0.857035 cpu_s=3.310000 util_pct=386.22 checksum=6753946891414406104
 
- Performance counter stats for './bin/procesos_fork 800000000 4':
+ Performance counter stats for 'python3 src/procesos_fork.py 3000000 4':
 
-     5.677.868.649      cycles:u                                                              
-    10.400.158.051      instructions:u                                                        
-       800.036.031      branches:u                                                            
-             9.025      branch-misses:u                                                       
-            72.922      cache-references:u                                                    
-            30.753      cache-misses:u                                                        
+     6.918.763.043      cycles:u                                                              
+    17.914.860.564      instructions:u                                                        
+     3.416.743.786      branches:u                                                            
+        13.203.630      branch-misses:u                                                       
+        21.039.650      cache-references:u                                                    
+         3.307.230      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          2.787,68 msec task-clock:u                                                          
+          3.393,53 msec task-clock:u                                                          
 
-       0,706508312 seconds time elapsed
+       0,899176390 seconds time elapsed
 
-       2,745825000 seconds user
-       0,007407000 seconds sys
+       3,349657000 seconds user
+       0,021708000 seconds sys
 
 
 
 ############################################################
-### afinidad 1 LP (4 hilos)
-### cmd: taskset -c 0 ./bin/hilos_pthread 800000000 4
+### afinidad proc 1 LP (4 proc)
+### cmd: taskset -c 0 python3 src/procesos_fork.py 3000000 4
 ############################################################
-RESULT mode=hilos_pthread units=4 logical_cpus=12 total_iters=800000000 wall_s=3.001536 cpu_s=2.787668 util_pct=92.87 checksum=4314293330488784900
+[fork] hijo pid=15274 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=15276 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=15275 iters=750000 checksum=66683840669113584
+[fork] hijo pid=15277 iters=750000 checksum=16637159245383562046
+RESULT mode=procesos_fork units=4 logical_cpus=12 total_iters=3000000 wall_s=3.238382 cpu_s=3.190000 util_pct=98.51 checksum=6753946891414406104
 
- Performance counter stats for 'taskset -c 0 ./bin/hilos_pthread 800000000 4':
+ Performance counter stats for 'taskset -c 0 python3 src/procesos_fork.py 3000000 4':
 
-     5.626.019.639      cycles:u                                                              
-    10.400.371.269      instructions:u                                                        
-       800.100.678      branches:u                                                            
-            39.339      branch-misses:u                                                       
-           253.889      cache-references:u                                                    
-            37.974      cache-misses:u                                                        
+     6.610.760.538      cycles:u                                                              
+    17.915.155.576      instructions:u                                                        
+     3.416.809.756      branches:u                                                            
+        13.147.818      branch-misses:u                                                       
+        15.354.370      cache-references:u                                                    
+         2.355.541      cache-misses:u                                                        
                  0      context-switches:u                                                    
                  0      cpu-migrations:u                                                      
-          2.983,91 msec task-clock:u                                                          
+          3.280,17 msec task-clock:u                                                          
 
-       3,005379319 seconds time elapsed
+       3,290083111 seconds time elapsed
 
-       2,638893000 seconds user
-       0,151837000 seconds sys
+       3,225893000 seconds user
+       0,027481000 seconds sys
 
 
 

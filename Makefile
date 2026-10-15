@@ -1,39 +1,20 @@
-# Makefile - Laboratorio de procesos e hilos (Linux)
+# Makefile - Laboratorio de procesos e hilos, version PYTHON (Linux)
 #
-# Todas las variantes se compilan con las MISMAS opciones (-O2, gcc) para que
-# las comparaciones sean validas. Proyecto exclusivamente para Linux.
+# Python no se compila: `make` valida la sintaxis de todos los modulos y
+# `make clean` elimina la cache de bytecode. Requiere Python 3.8+ en Linux.
 
-CC      := gcc
-CFLAGS  := -O2 -std=c11 -Wall -Wextra -pthread
-BINDIR  := bin
-SRCDIR  := src
+PYTHON := python3
 
-TARGETS := $(BINDIR)/secuencial \
-           $(BINDIR)/hilos_pthread \
-           $(BINDIR)/procesos_fork \
-           $(BINDIR)/migracion \
-           $(BINDIR)/memoria_hilo_proceso
+.PHONY: all check clean
 
-.PHONY: all clean
-all: $(TARGETS)
+all: check
 
-$(BINDIR):
-	mkdir -p $(BINDIR)
-
-$(BINDIR)/secuencial: $(SRCDIR)/secuencial.c $(SRCDIR)/work.h | $(BINDIR)
-	$(CC) $(CFLAGS) -o $@ $(SRCDIR)/secuencial.c
-
-$(BINDIR)/hilos_pthread: $(SRCDIR)/hilos_pthread.c $(SRCDIR)/work.h | $(BINDIR)
-	$(CC) $(CFLAGS) -o $@ $(SRCDIR)/hilos_pthread.c
-
-$(BINDIR)/procesos_fork: $(SRCDIR)/procesos_fork.c $(SRCDIR)/work.h | $(BINDIR)
-	$(CC) $(CFLAGS) -o $@ $(SRCDIR)/procesos_fork.c
-
-$(BINDIR)/migracion: $(SRCDIR)/migracion.c $(SRCDIR)/work.h | $(BINDIR)
-	$(CC) $(CFLAGS) -o $@ $(SRCDIR)/migracion.c
-
-$(BINDIR)/memoria_hilo_proceso: $(SRCDIR)/memoria_hilo_proceso.c | $(BINDIR)
-	$(CC) $(CFLAGS) -o $@ $(SRCDIR)/memoria_hilo_proceso.c
+check:
+	@for f in src/*.py scripts/*.py; do \
+		$(PYTHON) -m py_compile "$$f" || exit 1; \
+	done
+	@echo "Sintaxis OK"
 
 clean:
-	rm -rf $(BINDIR)
+	@find . -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true
+	@echo "Cache de bytecode eliminada"

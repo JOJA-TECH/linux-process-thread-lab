@@ -18,12 +18,12 @@
 | Lenguaje | Python 3 (stdlib: `threading`, `os.fork`, `ctypes`, `time`) y scripts de análisis |
 | Dependencias | Solo biblioteca estándar (las gráficas se generan como SVG a mano; **no** se usa matplotlib) |
 | Fecha de ejecución | 2026-10-15, 17:04–17:09 (America/Bogota, −05:00) |
-| Directorio de trabajo | `/home/chaos/Projects/universidad/os/taller/python` |
-| Rama del repositorio | `python` (sobre la rama `main`, que contiene la versión C) |
+| Directorio de trabajo | `/home/chaos/Projects/universidad/os/taller` |
+| Rama del repositorio | `python` (rama independiente; la versión C vive en la rama `main`) |
 | Alcance | **Exclusivamente Linux** |
 | Evidencia | Salidas de terminal, archivos CSV y de log (no se dispone de capturas gráficas de escritorio) |
 
-> **Nota metodológica de honestidad.** Todos los valores de este informe fueron **medidos** en el equipo descrito con la implementación Python de `python/src/`. La carga es **bit a bit idéntica** a la de la versión C (mismos checksums), lo que permite comparar ambas implementaciones con confianza.
+> **Nota metodológica de honestidad.** Todos los valores de este informe fueron **medidos** en el equipo descrito con la implementación Python de `src/`. La carga es **bit a bit idéntica** a la de la versión C (mismos checksums), lo que permite comparar ambas implementaciones con confianza.
 
 ---
 
@@ -244,7 +244,7 @@ Esto demuestra que **la carga Python es la misma que la C**, validando la compar
 
 ## 8. Código fuente y explicación de la implementación
 
-Archivos en `python/src/` (código completo en el Anexo A):
+Archivos en `src/` (código completo en el Anexo A):
 
 | Archivo | Descripción |
 |---|---|
@@ -706,7 +706,7 @@ En síntesis: **qué ocurrió** → en Python los hilos no aceleran y los proces
 
 ### Anexo A. Código fuente
 
-**`python/src/work.py` (núcleo):**
+**`src/work.py` (núcleo):**
 
 ```python
 MASK = (1 << 64) - 1
@@ -742,7 +742,7 @@ _libc.sched_getcpu.restype = ctypes.c_int
 def sched_getcpu(): return _libc.sched_getcpu()
 ```
 
-**`python/src/hilos_threading.py` (núcleo):**
+**`src/hilos_threading.py` (núcleo):**
 
 ```python
 def thread_main(iters, seed, out, idx):
@@ -762,7 +762,7 @@ checksum = 0
 for v in out: checksum ^= v
 ```
 
-**`python/src/procesos_fork.py` (núcleo):**
+**`src/procesos_fork.py` (núcleo):**
 
 ```python
 REC = struct.Struct("<QQQ")   # pid, iters, checksum
@@ -781,12 +781,12 @@ os.close(w)
 for pid in kids: os.waitpid(pid, 0)
 ```
 
-> El código completo de `secuencial.py`, `migracion.py` y `memoria_hilo_proceso.py` se entrega en `python/src/`.
+> El código completo de `secuencial.py`, `migracion.py` y `memoria_hilo_proceso.py` se entrega en `src/`.
 
 ### Anexo B. Comandos de ejecución
 
 ```bash
-# Ejecución individual (desde el directorio `python/`)
+# Ejecución individual (desde la raíz del proyecto)
 python3 src/secuencial.py 3000000
 python3 src/hilos_threading.py 3000000 4
 python3 src/procesos_fork.py 3000000 4
@@ -837,4 +837,4 @@ Ejemplo de `perf stat` (hilos 8):
                 ...     cache-misses:u          (24.4 %)
 ```
 
-Archivos de evidencia: `python/resultados/mediciones.csv`, `python/resultados/raw_runs.log`, `python/resultados/estadisticas.csv`, `python/resultados/estadisticas.md`, `python/resultados/scheduler_observacion.txt`, `python/resultados/baseline_carga.txt`, `python/resultados/perf_mediciones.txt`, `python/resultados/perf_resumen.md`.
+Archivos de evidencia: `resultados/mediciones.csv`, `resultados/raw_runs.log`, `resultados/estadisticas.csv`, `resultados/estadisticas.md`, `resultados/scheduler_observacion.txt`, `resultados/baseline_carga.txt`, `resultados/perf_mediciones.txt`, `resultados/perf_resumen.md`.

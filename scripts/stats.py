@@ -4,6 +4,7 @@
 Genera:
   resultados/estadisticas.csv  (datos por configuracion)
   resultados/estadisticas.md   (tabla Markdown lista para el informe)
+Debe ejecutarse desde la raíz del proyecto.
 """
 import csv
 import statistics as st
@@ -13,7 +14,7 @@ CSV_IN = "resultados/mediciones.csv"
 CSV_OUT = "resultados/estadisticas.csv"
 MD_OUT = "resultados/estadisticas.md"
 
-groups = defaultdict(list)          # (mode, units) -> [wall,...]
+groups = defaultdict(list)
 cpu = defaultdict(list)
 util = defaultdict(list)
 
@@ -24,7 +25,6 @@ with open(CSV_IN, newline="") as f:
         cpu[key].append(float(row["cpu_s"].replace(",", ".")))
         util[key].append(float(row["util_pct"].replace(",", ".")))
 
-# Linea base: version secuencial (1 unidad)
 base = st.mean(groups[("secuencial", 1)])
 
 rows = []

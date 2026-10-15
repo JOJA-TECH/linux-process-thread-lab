@@ -1,137 +1,207 @@
-== Inicio 2026-10-13T16:16:22-05:00  (what=all) ==
-[fork] hijo pid=16639 iters=800000000 checksum=5016696464481751843
-[fork] hijo pid=16649 iters=800000000 checksum=5016696464481751843
-[fork] hijo pid=16663 iters=800000000 checksum=5016696464481751843
-[fork] hijo pid=16674 iters=400000000 checksum=9347429820613851211
-[fork] hijo pid=16673 iters=400000000 checksum=16640870520435910198
-[fork] hijo pid=16683 iters=400000000 checksum=9347429820613851211
-[fork] hijo pid=16682 iters=400000000 checksum=16640870520435910198
-[fork] hijo pid=16693 iters=400000000 checksum=9347429820613851211
-[fork] hijo pid=16692 iters=400000000 checksum=16640870520435910198
-[fork] hijo pid=16705 iters=200000000 checksum=18307653480770699442
-[fork] hijo pid=16702 iters=200000000 checksum=14996968004848212659
-[fork] hijo pid=16703 iters=200000000 checksum=3089575991617100877
-[fork] hijo pid=16704 iters=200000000 checksum=4553461609537683016
-[fork] hijo pid=16716 iters=200000000 checksum=18307653480770699442
-[fork] hijo pid=16715 iters=200000000 checksum=4553461609537683016
-[fork] hijo pid=16713 iters=200000000 checksum=14996968004848212659
-[fork] hijo pid=16714 iters=200000000 checksum=3089575991617100877
-[fork] hijo pid=16725 iters=200000000 checksum=3089575991617100877
-[fork] hijo pid=16724 iters=200000000 checksum=14996968004848212659
-[fork] hijo pid=16726 iters=200000000 checksum=4553461609537683016
-[fork] hijo pid=16727 iters=200000000 checksum=18307653480770699442
-[fork] hijo pid=16738 iters=100000000 checksum=1135518825153703046
-[fork] hijo pid=16742 iters=100000000 checksum=12374167929502937498
-[fork] hijo pid=16741 iters=100000000 checksum=3560857918833270141
-[fork] hijo pid=16739 iters=100000000 checksum=14698481506460121623
-[fork] hijo pid=16737 iters=100000000 checksum=1365319690552295695
-[fork] hijo pid=16740 iters=100000000 checksum=9403123137218542806
-[fork] hijo pid=16736 iters=100000000 checksum=17570777619576167207
-[fork] hijo pid=16743 iters=100000000 checksum=17654418875345362649
-[fork] hijo pid=16752 iters=100000000 checksum=1365319690552295695
-[fork] hijo pid=16751 iters=100000000 checksum=17570777619576167207
-[fork] hijo pid=16756 iters=100000000 checksum=3560857918833270141
-[fork] hijo pid=16753 iters=100000000 checksum=1135518825153703046
-[fork] hijo pid=16755 iters=100000000 checksum=9403123137218542806
-[fork] hijo pid=16754 iters=100000000 checksum=14698481506460121623
-[fork] hijo pid=16758 iters=100000000 checksum=17654418875345362649
-[fork] hijo pid=16757 iters=100000000 checksum=12374167929502937498
-[fork] hijo pid=16770 iters=100000000 checksum=9403123137218542806
-[fork] hijo pid=16769 iters=100000000 checksum=14698481506460121623
-[fork] hijo pid=16768 iters=100000000 checksum=1135518825153703046
-[fork] hijo pid=16766 iters=100000000 checksum=17570777619576167207
-[fork] hijo pid=16771 iters=100000000 checksum=3560857918833270141
-[fork] hijo pid=16773 iters=100000000 checksum=17654418875345362649
-[fork] hijo pid=16767 iters=100000000 checksum=1365319690552295695
-[fork] hijo pid=16772 iters=100000000 checksum=12374167929502937498
-[fork] hijo pid=16782 iters=66666667 checksum=18338067866179624002
-[fork] hijo pid=16783 iters=66666667 checksum=5209704355825951881
-[fork] hijo pid=16792 iters=66666666 checksum=12703986163390784567
-[fork] hijo pid=16786 iters=66666667 checksum=14446998045191414708
-[fork] hijo pid=16788 iters=66666667 checksum=396323570857609394
-[fork] hijo pid=16789 iters=66666667 checksum=8833766996692972133
-[fork] hijo pid=16785 iters=66666667 checksum=6588952072464392867
-[fork] hijo pid=16784 iters=66666667 checksum=9439037729403525355
-[fork] hijo pid=16791 iters=66666666 checksum=4964537100078832286
-[fork] hijo pid=16793 iters=66666666 checksum=8410381414362989561
-[fork] hijo pid=16790 iters=66666666 checksum=9324585954682784365
-[fork] hijo pid=16787 iters=66666667 checksum=2747947412733235670
-[fork] hijo pid=16803 iters=66666667 checksum=9439037729403525355
-[fork] hijo pid=16806 iters=66666667 checksum=2747947412733235670
-[fork] hijo pid=16812 iters=66666666 checksum=8410381414362989561
-[fork] hijo pid=16810 iters=66666666 checksum=4964537100078832286
-[fork] hijo pid=16801 iters=66666667 checksum=18338067866179624002
-[fork] hijo pid=16805 iters=66666667 checksum=14446998045191414708
-[fork] hijo pid=16802 iters=66666667 checksum=5209704355825951881
-[fork] hijo pid=16811 iters=66666666 checksum=12703986163390784567
-[fork] hijo pid=16809 iters=66666666 checksum=9324585954682784365
-[fork] hijo pid=16808 iters=66666667 checksum=8833766996692972133
-[fork] hijo pid=16804 iters=66666667 checksum=6588952072464392867
-[fork] hijo pid=16807 iters=66666667 checksum=396323570857609394
-[fork] hijo pid=16825 iters=66666667 checksum=2747947412733235670
-[fork] hijo pid=16820 iters=66666667 checksum=18338067866179624002
-[fork] hijo pid=16824 iters=66666667 checksum=14446998045191414708
-[fork] hijo pid=16829 iters=66666666 checksum=4964537100078832286
-[fork] hijo pid=16826 iters=66666667 checksum=396323570857609394
-[fork] hijo pid=16831 iters=66666666 checksum=8410381414362989561
-[fork] hijo pid=16822 iters=66666667 checksum=9439037729403525355
-[fork] hijo pid=16830 iters=66666666 checksum=12703986163390784567
-[fork] hijo pid=16823 iters=66666667 checksum=6588952072464392867
-[fork] hijo pid=16828 iters=66666666 checksum=9324585954682784365
-[fork] hijo pid=16827 iters=66666667 checksum=8833766996692972133
-[fork] hijo pid=16821 iters=66666667 checksum=5209704355825951881
-[fork] hijo pid=16845 iters=50000000 checksum=4506724993026841727
-[fork] hijo pid=16846 iters=50000000 checksum=141454541024102896
-[fork] hijo pid=16843 iters=50000000 checksum=5577109573914888237
-[fork] hijo pid=16847 iters=50000000 checksum=7987481389363566504
-[fork] hijo pid=16840 iters=50000000 checksum=4730896042960202646
-[fork] hijo pid=16854 iters=50000000 checksum=14012291348409805933
-[fork] hijo pid=16851 iters=50000000 checksum=16340346591356739595
-[fork] hijo pid=16853 iters=50000000 checksum=11810059358761868219
-[fork] hijo pid=16841 iters=50000000 checksum=12577474876982277469
-[fork] hijo pid=16849 iters=50000000 checksum=16457713680499879402
-[fork] hijo pid=16848 iters=50000000 checksum=15343681300987837996
-[fork] hijo pid=16842 iters=50000000 checksum=2816737202638376305
-[fork] hijo pid=16850 iters=50000000 checksum=12367396839506886361
-[fork] hijo pid=16855 iters=50000000 checksum=10371429134998265958
-[fork] hijo pid=16844 iters=50000000 checksum=15248847686546281263
-[fork] hijo pid=16852 iters=50000000 checksum=8310725561603831330
-[fork] hijo pid=16871 iters=50000000 checksum=7987481389363566504
-[fork] hijo pid=16873 iters=50000000 checksum=16457713680499879402
-[fork] hijo pid=16864 iters=50000000 checksum=4730896042960202646
-[fork] hijo pid=16874 iters=50000000 checksum=12367396839506886361
-[fork] hijo pid=16870 iters=50000000 checksum=141454541024102896
-[fork] hijo pid=16865 iters=50000000 checksum=12577474876982277469
-[fork] hijo pid=16868 iters=50000000 checksum=15248847686546281263
-[fork] hijo pid=16866 iters=50000000 checksum=2816737202638376305
-[fork] hijo pid=16875 iters=50000000 checksum=16340346591356739595
-[fork] hijo pid=16876 iters=50000000 checksum=8310725561603831330
-[fork] hijo pid=16877 iters=50000000 checksum=11810059358761868219
-[fork] hijo pid=16879 iters=50000000 checksum=10371429134998265958
-[fork] hijo pid=16878 iters=50000000 checksum=14012291348409805933
-[fork] hijo pid=16867 iters=50000000 checksum=5577109573914888237
-[fork] hijo pid=16872 iters=50000000 checksum=15343681300987837996
-[fork] hijo pid=16869 iters=50000000 checksum=4506724993026841727
-[fork] hijo pid=16894 iters=50000000 checksum=7987481389363566504
-[fork] hijo pid=16891 iters=50000000 checksum=15248847686546281263
-[fork] hijo pid=16893 iters=50000000 checksum=141454541024102896
-[fork] hijo pid=16887 iters=50000000 checksum=4730896042960202646
-[fork] hijo pid=16889 iters=50000000 checksum=2816737202638376305
-[fork] hijo pid=16897 iters=50000000 checksum=12367396839506886361
-[fork] hijo pid=16888 iters=50000000 checksum=12577474876982277469
-[fork] hijo pid=16892 iters=50000000 checksum=4506724993026841727
-[fork] hijo pid=16901 iters=50000000 checksum=14012291348409805933
-[fork] hijo pid=16895 iters=50000000 checksum=15343681300987837996
-[fork] hijo pid=16902 iters=50000000 checksum=10371429134998265958
-[fork] hijo pid=16899 iters=50000000 checksum=8310725561603831330
-[fork] hijo pid=16900 iters=50000000 checksum=11810059358761868219
-[fork] hijo pid=16896 iters=50000000 checksum=16457713680499879402
-[fork] hijo pid=16890 iters=50000000 checksum=5577109573914888237
-[fork] hijo pid=16898 iters=50000000 checksum=16340346591356739595
+== Inicio 2026-10-15T17:04:40-05:00  (what=all) ==
+[fork] hijo pid=14221 iters=3000000 checksum=14414186446203882457
+[fork] hijo pid=14233 iters=3000000 checksum=14414186446203882457
+[fork] hijo pid=14246 iters=3000000 checksum=14414186446203882457
+[fork] hijo pid=14260 iters=1500000 checksum=11816315997643212283
+[fork] hijo pid=14259 iters=1500000 checksum=11819978784544212473
+[fork] hijo pid=14272 iters=1500000 checksum=11819978784544212473
+[fork] hijo pid=14273 iters=1500000 checksum=11816315997643212283
+[fork] hijo pid=14286 iters=1500000 checksum=11819978784544212473
+[fork] hijo pid=14287 iters=1500000 checksum=11816315997643212283
+[fork] hijo pid=14301 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14302 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14303 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14300 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14315 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14318 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14317 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14316 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14333 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14332 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14330 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14331 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14351 iters=375000 checksum=17067743057726118685
+[fork] hijo pid=14353 iters=375000 checksum=16776780733048728351
+[fork] hijo pid=14352 iters=375000 checksum=7315061873586609380
+[fork] hijo pid=14350 iters=375000 checksum=16764017439001288530
+[fork] hijo pid=14348 iters=375000 checksum=11052109249043491733
+[fork] hijo pid=14346 iters=375000 checksum=4293739228566523727
+[fork] hijo pid=14349 iters=375000 checksum=12887734013387162931
+[fork] hijo pid=14347 iters=375000 checksum=16049174908889017866
+[fork] hijo pid=14366 iters=375000 checksum=16049174908889017866
+[fork] hijo pid=14368 iters=375000 checksum=12887734013387162931
+[fork] hijo pid=14370 iters=375000 checksum=17067743057726118685
+[fork] hijo pid=14367 iters=375000 checksum=11052109249043491733
+[fork] hijo pid=14371 iters=375000 checksum=7315061873586609380
+[fork] hijo pid=14369 iters=375000 checksum=16764017439001288530
+[fork] hijo pid=14365 iters=375000 checksum=4293739228566523727
+[fork] hijo pid=14372 iters=375000 checksum=16776780733048728351
+[fork] hijo pid=14388 iters=375000 checksum=16764017439001288530
+[fork] hijo pid=14384 iters=375000 checksum=4293739228566523727
+[fork] hijo pid=14385 iters=375000 checksum=16049174908889017866
+[fork] hijo pid=14390 iters=375000 checksum=7315061873586609380
+[fork] hijo pid=14391 iters=375000 checksum=16776780733048728351
+[fork] hijo pid=14386 iters=375000 checksum=11052109249043491733
+[fork] hijo pid=14389 iters=375000 checksum=17067743057726118685
+[fork] hijo pid=14387 iters=375000 checksum=12887734013387162931
+[fork] hijo pid=14410 iters=250000 checksum=763521135297184348
+[fork] hijo pid=14409 iters=250000 checksum=6903498322582554202
+[fork] hijo pid=14404 iters=250000 checksum=11566578197878746963
+[fork] hijo pid=14408 iters=250000 checksum=14923474952621699428
+[fork] hijo pid=14407 iters=250000 checksum=721793120726682967
+[fork] hijo pid=14415 iters=250000 checksum=14174681617895333687
+[fork] hijo pid=14413 iters=250000 checksum=5555234389594207984
+[fork] hijo pid=14411 iters=250000 checksum=1137520727770881763
+[fork] hijo pid=14406 iters=250000 checksum=2717820824695055280
+[fork] hijo pid=14414 iters=250000 checksum=1506118452208860398
+[fork] hijo pid=14412 iters=250000 checksum=16978552749912376894
+[fork] hijo pid=14405 iters=250000 checksum=7038702386405798837
+[fork] hijo pid=14430 iters=250000 checksum=721793120726682967
+[fork] hijo pid=14427 iters=250000 checksum=11566578197878746963
+[fork] hijo pid=14434 iters=250000 checksum=1137520727770881763
+[fork] hijo pid=14429 iters=250000 checksum=2717820824695055280
+[fork] hijo pid=14438 iters=250000 checksum=14174681617895333687
+[fork] hijo pid=14432 iters=250000 checksum=6903498322582554202
+[fork] hijo pid=14435 iters=250000 checksum=16978552749912376894
+[fork] hijo pid=14428 iters=250000 checksum=7038702386405798837
+[fork] hijo pid=14437 iters=250000 checksum=1506118452208860398
+[fork] hijo pid=14431 iters=250000 checksum=14923474952621699428
+[fork] hijo pid=14433 iters=250000 checksum=763521135297184348
+[fork] hijo pid=14436 iters=250000 checksum=5555234389594207984
+[fork] hijo pid=14453 iters=250000 checksum=721793120726682967
+[fork] hijo pid=14460 iters=250000 checksum=1506118452208860398
+[fork] hijo pid=14450 iters=250000 checksum=11566578197878746963
+[fork] hijo pid=14454 iters=250000 checksum=14923474952621699428
+[fork] hijo pid=14455 iters=250000 checksum=6903498322582554202
+[fork] hijo pid=14457 iters=250000 checksum=1137520727770881763
+[fork] hijo pid=14451 iters=250000 checksum=7038702386405798837
+[fork] hijo pid=14456 iters=250000 checksum=763521135297184348
+[fork] hijo pid=14461 iters=250000 checksum=14174681617895333687
+[fork] hijo pid=14459 iters=250000 checksum=5555234389594207984
+[fork] hijo pid=14458 iters=250000 checksum=16978552749912376894
+[fork] hijo pid=14452 iters=250000 checksum=2717820824695055280
+[fork] hijo pid=14483 iters=187500 checksum=8746143727116583244
+[fork] hijo pid=14478 iters=187500 checksum=1701022569579574961
+[fork] hijo pid=14476 iters=187500 checksum=8244937970386225740
+[fork] hijo pid=14481 iters=187500 checksum=18214627243850171193
+[fork] hijo pid=14488 iters=187500 checksum=5272893635189055086
+[fork] hijo pid=14480 iters=187500 checksum=4451815592790226335
+[fork] hijo pid=14487 iters=187500 checksum=8560210531250073778
+[fork] hijo pid=14474 iters=187500 checksum=4285472639704401197
+[fork] hijo pid=14477 iters=187500 checksum=2770876693126437933
+[fork] hijo pid=14484 iters=187500 checksum=533448560531435047
+[fork] hijo pid=14482 iters=187500 checksum=1473625801780206119
+[fork] hijo pid=14486 iters=187500 checksum=6408859469271550844
+[fork] hijo pid=14485 iters=187500 checksum=15590199490394326884
+[fork] hijo pid=14489 iters=187500 checksum=11454637080297091519
+[fork] hijo pid=14475 iters=187500 checksum=16193739429580847612
+[fork] hijo pid=14479 iters=187500 checksum=8994358949486844382
+[fork] hijo pid=14504 iters=187500 checksum=2770876693126437933
+[fork] hijo pid=14502 iters=187500 checksum=16193739429580847612
+[fork] hijo pid=14503 iters=187500 checksum=8244937970386225740
+[fork] hijo pid=14507 iters=187500 checksum=4451815592790226335
+[fork] hijo pid=14506 iters=187500 checksum=8994358949486844382
+[fork] hijo pid=14510 iters=187500 checksum=8746143727116583244
+[fork] hijo pid=14511 iters=187500 checksum=533448560531435047
+[fork] hijo pid=14505 iters=187500 checksum=1701022569579574961
+[fork] hijo pid=14515 iters=187500 checksum=5272893635189055086
+[fork] hijo pid=14512 iters=187500 checksum=15590199490394326884
+[fork] hijo pid=14514 iters=187500 checksum=8560210531250073778
+[fork] hijo pid=14501 iters=187500 checksum=4285472639704401197
+[fork] hijo pid=14509 iters=187500 checksum=1473625801780206119
+[fork] hijo pid=14516 iters=187500 checksum=11454637080297091519
+[fork] hijo pid=14508 iters=187500 checksum=18214627243850171193
+[fork] hijo pid=14513 iters=187500 checksum=6408859469271550844
+[fork] hijo pid=14530 iters=187500 checksum=8244937970386225740
+[fork] hijo pid=14532 iters=187500 checksum=1701022569579574961
+[fork] hijo pid=14534 iters=187500 checksum=4451815592790226335
+[fork] hijo pid=14537 iters=187500 checksum=8746143727116583244
+[fork] hijo pid=14528 iters=187500 checksum=4285472639704401197
+[fork] hijo pid=14543 iters=187500 checksum=11454637080297091519
+[fork] hijo pid=14531 iters=187500 checksum=2770876693126437933
+[fork] hijo pid=14533 iters=187500 checksum=8994358949486844382
+[fork] hijo pid=14529 iters=187500 checksum=16193739429580847612
+[fork] hijo pid=14541 iters=187500 checksum=8560210531250073778
+[fork] hijo pid=14538 iters=187500 checksum=533448560531435047
+[fork] hijo pid=14535 iters=187500 checksum=18214627243850171193
+[fork] hijo pid=14539 iters=187500 checksum=15590199490394326884
+[fork] hijo pid=14540 iters=187500 checksum=6408859469271550844
+[fork] hijo pid=14536 iters=187500 checksum=1473625801780206119
+[fork] hijo pid=14542 iters=187500 checksum=5272893635189055086
+[fork] hijo pid=14558 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14559 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14557 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14556 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14571 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14572 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14573 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14574 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14589 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14588 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14587 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14586 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14604 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14607 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14605 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14606 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14621 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14619 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14620 iters=750000 checksum=66683840669113584
+[fork] hijo pid=14622 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14638 iters=750000 checksum=17353596016291576862
+[fork] hijo pid=14636 iters=750000 checksum=5431752358961565704
+[fork] hijo pid=14639 iters=750000 checksum=16637159245383562046
+[fork] hijo pid=14637 iters=750000 checksum=66683840669113584
 ### MIGRACION libre ###
-INICIO pid=17008 cpu_actual=6 logical_cpus=12
-CPU_OBSERVADAS worker distinct=1 migrations=0 lista=2 
+INICIO pid=14696 cpu_actual=3 logical_cpus=12 n_workers=24
+  worker  0: distinct_cpus=7 migrations=86 lista=0 1 2 3 4 5 7
+  worker  1: distinct_cpus=6 migrations=74 lista=0 1 2 3 4 5
+  worker  2: distinct_cpus=6 migrations=89 lista=0 1 2 3 4 5
+  worker  3: distinct_cpus=6 migrations=87 lista=0 1 2 3 4 5
+  worker  4: distinct_cpus=6 migrations=94 lista=0 1 2 3 4 5
+  worker  5: distinct_cpus=6 migrations=96 lista=0 1 2 3 4 5
+  worker  6: distinct_cpus=6 migrations=95 lista=0 1 2 3 4 5
+  worker  7: distinct_cpus=7 migrations=91 lista=0 1 2 3 4 5 6
+  worker  8: distinct_cpus=6 migrations=77 lista=0 1 2 3 4 5
+  worker  9: distinct_cpus=6 migrations=83 lista=0 1 2 3 4 5
+  worker 10: distinct_cpus=7 migrations=81 lista=0 1 2 3 4 5 10
+  worker 11: distinct_cpus=6 migrations=79 lista=0 1 2 3 4 5
+  worker 12: distinct_cpus=6 migrations=97 lista=0 1 2 3 4 5
+  worker 13: distinct_cpus=6 migrations=100 lista=0 1 2 3 4 5
+  worker 14: distinct_cpus=6 migrations=89 lista=0 1 2 3 4 5
+  worker 15: distinct_cpus=6 migrations=101 lista=0 1 2 3 4 5
+  worker 16: distinct_cpus=6 migrations=92 lista=0 1 2 3 4 5
+  worker 17: distinct_cpus=6 migrations=101 lista=0 1 2 3 4 5
+  worker 18: distinct_cpus=6 migrations=95 lista=0 1 2 3 4 5
+  worker 19: distinct_cpus=6 migrations=93 lista=0 1 2 3 4 5
+  worker 20: distinct_cpus=6 migrations=90 lista=0 1 2 3 4 5
+  worker 21: distinct_cpus=6 migrations=93 lista=0 1 2 3 4 5
+  worker 22: distinct_cpus=6 migrations=88 lista=0 1 2 3 4 5
+  worker 23: distinct_cpus=6 migrations=91 lista=0 1 2 3 4 5
 ### MIGRACION taskset -c 0 ###
-INICIO pid=17011 cpu_actual=0 logical_cpus=12
-CPU_OBSERVADAS worker distinct=1 migrations=0 lista=0 
-== Fin 2026-10-13T16:17:23-05:00 ==
+INICIO pid=14731 cpu_actual=0 logical_cpus=1 n_workers=24
+  worker  0: distinct_cpus=1 migrations=0 lista=0
+  worker  1: distinct_cpus=1 migrations=0 lista=0
+  worker  2: distinct_cpus=1 migrations=0 lista=0
+  worker  3: distinct_cpus=1 migrations=0 lista=0
+  worker  4: distinct_cpus=1 migrations=0 lista=0
+  worker  5: distinct_cpus=1 migrations=0 lista=0
+  worker  6: distinct_cpus=1 migrations=0 lista=0
+  worker  7: distinct_cpus=1 migrations=0 lista=0
+  worker  8: distinct_cpus=1 migrations=0 lista=0
+  worker  9: distinct_cpus=1 migrations=0 lista=0
+  worker 10: distinct_cpus=1 migrations=0 lista=0
+  worker 11: distinct_cpus=1 migrations=0 lista=0
+  worker 12: distinct_cpus=1 migrations=0 lista=0
+  worker 13: distinct_cpus=1 migrations=0 lista=0
+  worker 14: distinct_cpus=1 migrations=0 lista=0
+  worker 15: distinct_cpus=1 migrations=0 lista=0
+  worker 16: distinct_cpus=1 migrations=0 lista=0
+  worker 17: distinct_cpus=1 migrations=0 lista=0
+  worker 18: distinct_cpus=1 migrations=0 lista=0
+  worker 19: distinct_cpus=1 migrations=0 lista=0
+  worker 20: distinct_cpus=1 migrations=0 lista=0
+  worker 21: distinct_cpus=1 migrations=0 lista=0
+  worker 22: distinct_cpus=1 migrations=0 lista=0
+  worker 23: distinct_cpus=1 migrations=0 lista=0
+== Fin 2026-10-15T17:07:12-05:00 ==

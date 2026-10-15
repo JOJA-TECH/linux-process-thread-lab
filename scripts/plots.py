@@ -5,6 +5,7 @@ Salidas en figuras/:
   tiempo_vs_hilos.svg   - tiempo medio de pared vs numero de hilos/procesos
   cpu_vs_hilos.svg      - utilizacion media de CPU vs numero de hilos/procesos
   speedup_vs_hilos.svg  - aceleracion (speedup) vs numero de hilos/procesos
+Debe ejecutarse desde la raíz del proyecto.
 """
 import csv
 import statistics as st
@@ -14,8 +15,8 @@ CSV_IN = "resultados/mediciones.csv"
 FIG = "figuras"
 
 W, H = 860, 560
-ML, MR, MT, MB = 90, 190, 60, 70          # margenes izq/der/arr/aba
-PW, PH = W - ML - MR, H - MT - MB         # area de trazado
+ML, MR, MT, MB = 90, 210, 60, 70
+PW, PH = W - ML - MR, H - MT - MB
 
 groups = defaultdict(list)
 util = defaultdict(list)
@@ -47,7 +48,6 @@ def chart(fname, title, ymax, ylab, series_defs, ideal=False, ideal_label="", ys
     p.append(f'<rect width="{W}" height="{H}" fill="white"/>')
     p.append(f'<text x="{W/2}" y="32" font-size="20" text-anchor="middle" font-weight="bold">{esc(title)}</text>')
     xmax = 17
-    # rejilla + ejes
     gy = 0.0
     while gy <= ymax + 1e-9:
         yy = sy(gy, ymax)
@@ -67,9 +67,9 @@ def chart(fname, title, ymax, ylab, series_defs, ideal=False, ideal_label="", ys
              f'transform="rotate(-90 22 {MT+PH/2:.0f})">{esc(ylab)}</text>')
     if ideal:
         p.append(f'<line x1="{sx(0,xmax):.1f}" y1="{sy(0,ymax):.1f}" '
-                 f'x2="{sx(xmax,ymax if ymax>=xmax else xmax):.1f}" y2="'
-                 f'{sy(min(xmax,ymax),ymax):.1f}" stroke="#bbb" stroke-dasharray="6 4"/>')
-    colors = {"hilos_pthread": "#1f77b4", "procesos_fork": "#d62728"}
+                 f'x2="{sx(min(xmax,ymax),xmax):.1f}" y2="{sy(min(xmax,ymax),ymax):.1f}" '
+                 f'stroke="#bbb" stroke-dasharray="6 4"/>')
+    colors = {"hilos_threading": "#1f77b4", "procesos_fork": "#d62728"}
     for mode, label in series_defs:
         xs, ys, lo, hi = series(mode)
         col = colors.get(mode, "#2ca02c")
@@ -84,7 +84,6 @@ def chart(fname, title, ymax, ylab, series_defs, ideal=False, ideal_label="", ys
         p.append(f'<line x1="{ML+PW-3:.1f}" y1="{MT+20}" x2="{ML+PW-40:.1f}" y2="{MT+20}" '
                  f'stroke="#bbb" stroke-dasharray="6 4" stroke-width="2"/>')
         p.append(f'<text x="{ML+PW-46:.1f}" y="{MT+24}" font-size="12" text-anchor="end">{esc(ideal_label)}</text>')
-    # leyenda
     ly = MT + 20
     for mode, label in series_defs:
         col = colors.get(mode, "#2ca02c")
@@ -97,11 +96,11 @@ def chart(fname, title, ymax, ylab, series_defs, ideal=False, ideal_label="", ys
     print("escrito", f"{FIG}/{fname}")
 
 
-series_defs = [("hilos_pthread", "Hilos pthread"), ("procesos_fork", "Procesos fork")]
+series_defs = [("hilos_threading", "Hilos (threading, GIL)"),
+               ("procesos_fork", "Procesos (fork)")]
 
-ymax_t = 3.0
 chart("tiempo_vs_hilos.svg", "Tiempo de pared medio vs numero de unidades",
-      ymax_t, "Tiempo (s)", series_defs, ystep=0.5)
+      3.4, "Tiempo (s)", series_defs, ystep=0.5)
 chart("cpu_vs_hilos.svg", "Utilizacion media de CPU vs numero de unidades",
       1000, "CPU utilizada (%)", series_defs, ystep=100)
 chart("speedup_vs_hilos.svg", "Aceleracion vs numero de unidades (base = secuencial)",
