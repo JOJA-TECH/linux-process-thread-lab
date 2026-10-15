@@ -69,7 +69,8 @@ def chart(fname, title, ymax, ylab, series_defs, ideal=False, ideal_label="", ys
         p.append(f'<line x1="{sx(0,xmax):.1f}" y1="{sy(0,ymax):.1f}" '
                  f'x2="{sx(min(xmax,ymax),xmax):.1f}" y2="{sy(min(xmax,ymax),ymax):.1f}" '
                  f'stroke="#bbb" stroke-dasharray="6 4"/>')
-    colors = {"hilos_threading": "#1f77b4", "procesos_fork": "#d62728"}
+    colors = {"hilos_threading": "#1f77b4", "procesos_fork": "#d62728",
+              "procesos_mp": "#d62728"}
     for mode, label in series_defs:
         xs, ys, lo, hi = series(mode)
         col = colors.get(mode, "#2ca02c")
@@ -98,6 +99,10 @@ def chart(fname, title, ymax, ylab, series_defs, ideal=False, ideal_label="", ys
 
 series_defs = [("hilos_threading", "Hilos (threading, GIL)"),
                ("procesos_fork", "Procesos (fork)")]
+# En Windows los procesos se implementan con multiprocessing (mode=procesos_mp).
+if ("procesos_fork", 1) not in groups and ("procesos_mp", 1) in groups:
+    series_defs = [("hilos_threading", "Hilos (threading, GIL)"),
+                   ("procesos_mp", "Procesos (multiprocessing)")]
 
 chart("tiempo_vs_hilos.svg", "Tiempo de pared medio vs numero de unidades",
       3.4, "Tiempo (s)", series_defs, ystep=0.5)

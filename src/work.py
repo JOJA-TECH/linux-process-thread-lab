@@ -81,25 +81,81 @@ def logical_cpus():
     return os.cpu_count() or 1
 
 
-# Enlaza sched_getcpu(3) de libc (os.sched_getcpu no esta en todas las builds).
-try:
-    _libc = ctypes.CDLL("libc.so.6", use_errno=True)
-    _libc.sched_getcpu.restype = ctypes.c_int
-    _HAVE_GETCPU = True
-except (OSError, AttributeError):
-    _HAVE_GETCPU = False
+# ---- Acceso al procesador logico actual: multiplataforma ------------------
+# Linux : sched_getcpu(3) de libc (os.sched_getcpu no esta en todas las builds)
+# Windows: GetCurrentProcessorNumber() de kernel32
+def _init_getcpu():
+    if sys.platform == "win32":
+        try:
+            k32 = ctypes.WinDLL("kernel32", use_last_error=True)
+            k32.GetCurrentProcessorNumber.restype = ctypes.c_ulong
+            return ("win", k32)
+        except OSError:
+            return None
+    try:
+        libc = ctypes.CDLL("libc.so.6", use_errno=True)
+        libc.sched_getcpu.restype = ctypes.c_int
+        return ("libc", libc)
+    except OSError:
+        return None
+
+
+_GETCPU = _init_getcpu()
 
 
 def sched_getcpu():
     """Procesador logico en el que corre el hilo que llama, o -1 si no se
-    puede determinar. Equivale a sched_getcpu(3)."""
-    if _HAVE_GETCPU:
-        return _libc.sched_getcpu()
-    try:  # Reserva: campo 39 (processor) de /proc/self/stat (por hilo).
+    puede determinar. En Linux equivale a sched_getcpu(3); en Windows usa
+    GetCurrentProcessorNumber()."""
+    if _GETCPU:
+        kind, lib = _GETCPU
+        if kind == "win":
+            return int(lib.GetCurrentProcessorNumber())
+        return int(lib.sched_getcpu())
+    try:  # Reserva en Linux: campo 39 (processor) de /proc/self/stat (por hilo).
         with open("/proc/self/stat") as f:
             return int(f.read().rsplit(")", 1)[1].split()[36])
     except Exception:
         return -1
+
+
+def yield_cpu():
+    """Cede la CPU al planificador (os.sched_yield en Linux; time.sleep(0) en
+    Windows, que fuerza un cambio de contexto cooperativo)."""
+    if hasattr(os, "sched_yield"):
+        os.sched_yield()
+    else:
+        time.sleep(0)
+
+
+# ---- Afinidad de CPU: multiplataforma -------------------------------------
+# Se puede fijar con la variable de entorno AFFINITY="0" o "0,2,4,6", que
+# reproduce el efecto de `taskset -c` en Linux y de la mascara de afinidad en
+# Windows. Se aplica al importar el modulo, de modo que los procesos hijos lo
+# heredan.
+def apply_affinity(spec):
+    cpus = [int(x) for x in spec.split(",") if x.strip() != ""]
+    if not cpus:
+        return
+    if hasattr(os, "sched_setaffinity"):          # Linux
+        os.sched_setaffinity(0, set(cpus))
+    elif sys.platform == "win32":                  # Windows
+        mask = 0
+        for c in cpus:
+            mask |= (1 << c)
+        k32 = ctypes.WinDLL("kernel32", use_last_error=True)
+        k32.GetCurrentProcess.restype = ctypes.c_void_p
+        k32.SetProcessAffinityMask.argtypes = [ctypes.c_void_p, ctypes.c_size_t]
+        k32.SetProcessAffinityMask.restype = ctypes.c_int
+        if not k32.SetProcessAffinityMask(k32.GetCurrentProcess(),
+                                          ctypes.c_size_t(mask)):
+            raise OSError(ctypes.get_last_error(), "SetProcessAffinityMask")
+
+
+_env_affinity = os.environ.get("AFFINITY")
+if _env_affinity:
+    apply_affinity(_env_affinity)
+
 
 
 def arg_u64(s):

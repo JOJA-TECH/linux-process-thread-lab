@@ -44,6 +44,8 @@ speedup y eficiencia.
 ## Uso
 
 > Ejecutar **desde la raíz del proyecto** (las rutas son relativas).
+> El código es **multiplataforma**: en Linux usa `os.fork`; en Windows usa
+> `multiprocessing` (ver la sección **Windows** más abajo).
 
 ```bash
 # Carga secuencial: <iteraciones>
@@ -52,10 +54,10 @@ python3 src/secuencial.py 3000000
 # Hilos (threading, limitados por el GIL): <iteraciones> <n_hilos>
 python3 src/hilos_threading.py 3000000 4
 
-# Procesos (fork, paralelismo real): <iteraciones> <n_procesos>
+# Procesos (fork/multiprocessing, paralelismo real): <iteraciones> <n_procesos>
 python3 src/procesos_fork.py 3000000 4
 
-# Afinidad de CPU
+# Afinidad de CPU (Linux: taskset; Windows: variable AFFINITY, ver más abajo)
 taskset -c 0        python3 src/procesos_fork.py 3000000 4   # 1 solo procesador lógico
 taskset -c 0,2,4,6  python3 src/procesos_fork.py 3000000 4   # 4 núcleos físicos
 
@@ -85,6 +87,50 @@ python3 scripts/plots.py                # -> figuras/*.svg
 python3 scripts/perf_resumen.py resultados/perf_mediciones.txt resultados/perf_resumen.md
 sudo env OUT=resultados/perf_sudo.txt ./scripts/perf_mediciones.sh  # eventos de kernel (opcional)
 ```
+
+## Windows (sin WSL)
+
+El código es **multiplataforma** y corre en Windows nativo con CPython. Las
+diferencias de implementación (transparentes al usuario) son:
+
+| En Linux | En Windows |
+|---|---|
+| `os.fork` + `os.pipe` | `multiprocessing` (método `spawn`); el mode pasa a `procesos_mp` |
+| `taskset -c 0` | variable de entorno `AFFINITY=0` (máscara de afinidad) |
+| `sched_getcpu(3)` | `GetCurrentProcessorNumber()` (`kernel32`) |
+| `os.sched_yield()` | `time.sleep(0)` |
+| `perf stat` | **no disponible** (se omite §13.4) |
+| `.sh` (bash) | `run_experiments.ps1` (PowerShell) |
+
+Requisitos: **Python 3.10+** para Windows. Nada más (solo biblioteca estándar).
+
+```powershell
+# Desde la raíz del proyecto (PowerShell)
+
+# 1) Ejecución individual
+python src\secuencial.py 3000000
+python src\hilos_threading.py 3000000 4
+python src\procesos_fork.py 3000000 4          # usa multiprocessing en Windows
+
+# Afinidad (equivale a taskset -c):
+$env:AFFINITY="0";       python src\procesos_fork.py 3000000 4   # 1 LP
+$env:AFFINITY="0,2,4,6"; python src\procesos_fork.py 3000000 4   # 4 núcleos
+Remove-Item Env:\AFFINITY
+
+# Migración y memoria
+python src\migracion.py 2000 300 24
+python src\memoria_hilo_proceso.py
+
+# 2) Recrear todos los datos y figuras
+powershell -ExecutionPolicy Bypass -File scripts\run_experiments.ps1 all
+python scripts\stats.py           # -> resultados\estadisticas.{csv,md}
+python scripts\plots.py           # -> figuras\*.svg
+python scripts\baseline_carga.py 5
+```
+
+> En Windows **no hay `perf`**, así que la sección de contadores de hardware
+> (§13.4) no se reproduce allí. Todo lo demás (escalado, GIL, afinidad,
+> migración, memoria) sí.
 
 ## Metodología
 

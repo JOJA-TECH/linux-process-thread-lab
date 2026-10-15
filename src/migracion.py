@@ -19,7 +19,7 @@ import sys
 import threading
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from work import arg_u64, logical_cpus, sched_getcpu, spin_work
+from work import arg_u64, logical_cpus, sched_getcpu, spin_work, yield_cpu
 
 # Sumidero local por hilo (evita que el resultado se descarte).
 _sink = 0
@@ -39,7 +39,7 @@ def worker(iters, lotes, wid, results):
             if last != -1 and cpu != last:
                 migrations += 1
             last = cpu
-        os.sched_yield()  # da oportunidad al scheduler de balancear/migrar
+        yield_cpu()  # da oportunidad al scheduler de balancear/migrar
     _sink ^= acc
     results[wid] = (len(seen), migrations, sorted(seen))
 
