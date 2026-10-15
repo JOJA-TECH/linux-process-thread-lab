@@ -14,7 +14,13 @@
 
 param([string]$What = "all")
 
-$ErrorActionPreference = "Stop"
+# Los programas escriben trazas en stderr (p.ej. "[mp] hijo ..."); con
+# ErrorActionPreference = "Stop" PowerShell las trata como errores terminantes.
+# Usamos "Continue" y comprobamos $LASTEXITCODE manualmente.
+$ErrorActionPreference = "Continue"
+if (Get-Variable PSNativeCommandUseErrorActionPreference -ErrorAction SilentlyContinue) {
+    $PSNativeCommandUseErrorActionPreference = $false   # PowerShell 7.3+
+}
 
 $OUT   = "resultados\mediciones.csv"
 $LOG   = "resultados\raw_runs.log"
@@ -32,6 +38,7 @@ if ($What -eq "all") {
 function Run-One {
     param([int]$Rep, [string]$Label, [string[]]$CmdArgs)
     $out = & $PY @CmdArgs 2>> $LOG
+    if ($LASTEXITCODE -ne 0) { Write-Warning "salida $LASTEXITCODE: $($CmdArgs -join ' ')" }
     $rline = ($out | Where-Object { $_ -match '^RESULT ' } | Select-Object -Last 1)
     if (-not $rline) { return }
     $h = @{}
