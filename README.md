@@ -88,6 +88,10 @@ python3 scripts/perf_resumen.py resultados/perf_mediciones.txt resultados/perf_r
 sudo env OUT=resultados/perf_sudo.txt ./scripts/perf_mediciones.sh  # eventos de kernel (opcional)
 ```
 
+> `scripts/run_experiments.py` es el **equivalente multiplataforma** del `.sh`
+> (misma salida) y funciona tanto en Linux como en Windows; el `.ps1` lo invoca.
+> Opcionales: `TOTAL` (iteraciones) y `REPS` (repeticiones) por variable de entorno.
+
 ## Windows (sin WSL)
 
 El código es **multiplataforma** y corre en Windows nativo con CPython. Las
@@ -100,7 +104,7 @@ diferencias de implementación (transparentes al usuario) son:
 | `sched_getcpu(3)` | `GetCurrentProcessorNumber()` (`kernel32`) |
 | `os.sched_yield()` | `time.sleep(0)` |
 | `perf stat` | **no disponible** (se omite §13.4) |
-| `.sh` (bash) | `run_experiments.ps1` (PowerShell) |
+| `.sh` (bash) | `run_experiments.ps1` (PowerShell) → `run_experiments.py` |
 
 Requisitos: **Python 3.10+** para Windows. Nada más (solo biblioteca estándar).
 
