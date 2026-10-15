@@ -38,7 +38,7 @@ if ($What -eq "all") {
 function Run-One {
     param([int]$Rep, [string]$Label, [string[]]$CmdArgs)
     $out = & $PY @CmdArgs 2>> $LOG
-    if ($LASTEXITCODE -ne 0) { Write-Warning "salida $LASTEXITCODE: $($CmdArgs -join ' ')" }
+    if ($LASTEXITCODE -ne 0) { Write-Warning "salida ${LASTEXITCODE}: $($CmdArgs -join ' ')" }
     $rline = ($out | Where-Object { $_ -match '^RESULT ' } | Select-Object -Last 1)
     if (-not $rline) { return }
     $h = @{}
