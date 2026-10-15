@@ -35,7 +35,7 @@ def _child_proc():
 def parte_procesos():
     global g
     g = 0
-    if hasattr(os, "fork"):
+    if sys.platform != "win32" and hasattr(os, "fork"):
         print("=== PROCESOS (os.fork) ===")
         print("  [padre] antes del fork: g = %d" % g)
         sys.stdout.flush()  # vaciar buffers antes del fork para no duplicarlos

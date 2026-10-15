@@ -122,7 +122,9 @@ def main():
         sys.stderr.write("n_procesos debe ser >= 1\n")
         return 1
 
-    if hasattr(os, "fork") and not os.environ.get("FORCE_SPAWN"):
+    use_fork = (sys.platform != "win32" and hasattr(os, "fork")
+                and not os.environ.get("FORCE_SPAWN"))
+    if use_fork:
         return run_fork(total, n)
     return run_spawn(total, n)
 
