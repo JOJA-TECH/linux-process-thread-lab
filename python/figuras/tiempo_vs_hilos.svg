@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="560" viewBox="0 0 860 560" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="860" height="560" fill="white"/>
+<text x="430.0" y="32" font-size="20" text-anchor="middle" font-weight="bold">Tiempo de pared medio vs numero de unidades</text>
+<line x1="90" y1="490.0" x2="650" y2="490.0" stroke="#e6e6e6"/>
+<text x="80" y="494.0" font-size="12" text-anchor="end">0</text>
+<line x1="90" y1="426.8" x2="650" y2="426.8" stroke="#e6e6e6"/>
+<text x="80" y="430.8" font-size="12" text-anchor="end">0.5</text>
+<line x1="90" y1="363.5" x2="650" y2="363.5" stroke="#e6e6e6"/>
+<text x="80" y="367.5" font-size="12" text-anchor="end">1</text>
+<line x1="90" y1="300.3" x2="650" y2="300.3" stroke="#e6e6e6"/>
+<text x="80" y="304.3" font-size="12" text-anchor="end">1.5</text>
+<line x1="90" y1="237.1" x2="650" y2="237.1" stroke="#e6e6e6"/>
+<text x="80" y="241.1" font-size="12" text-anchor="end">2</text>
+<line x1="90" y1="173.8" x2="650" y2="173.8" stroke="#e6e6e6"/>
+<text x="80" y="177.8" font-size="12" text-anchor="end">2.5</text>
+<line x1="90" y1="110.6" x2="650" y2="110.6" stroke="#e6e6e6"/>
+<text x="80" y="114.6" font-size="12" text-anchor="end">3</text>
+<line x1="122.9" y1="60" x2="122.9" y2="490" stroke="#f0f0f0"/>
+<text x="122.9" y="510" font-size="12" text-anchor="middle">1</text>
+<line x1="155.9" y1="60" x2="155.9" y2="490" stroke="#f0f0f0"/>
+<text x="155.9" y="510" font-size="12" text-anchor="middle">2</text>
+<line x1="221.8" y1="60" x2="221.8" y2="490" stroke="#f0f0f0"/>
+<text x="221.8" y="510" font-size="12" text-anchor="middle">4</text>
+<line x1="287.6" y1="60" x2="287.6" y2="490" stroke="#f0f0f0"/>
+<text x="287.6" y="510" font-size="12" text-anchor="middle">6</text>
+<line x1="353.5" y1="60" x2="353.5" y2="490" stroke="#f0f0f0"/>
+<text x="353.5" y="510" font-size="12" text-anchor="middle">8</text>
+<line x1="419.4" y1="60" x2="419.4" y2="490" stroke="#f0f0f0"/>
+<text x="419.4" y="510" font-size="12" text-anchor="middle">10</text>
+<line x1="485.3" y1="60" x2="485.3" y2="490" stroke="#f0f0f0"/>
+<text x="485.3" y="510" font-size="12" text-anchor="middle">12</text>
+<line x1="551.2" y1="60" x2="551.2" y2="490" stroke="#f0f0f0"/>
+<text x="551.2" y="510" font-size="12" text-anchor="middle">14</text>
+<line x1="617.1" y1="60" x2="617.1" y2="490" stroke="#f0f0f0"/>
+<text x="617.1" y="510" font-size="12" text-anchor="middle">16</text>
+<line x1="90" y1="60" x2="90" y2="490" stroke="#333"/>
+<line x1="90" y1="490" x2="650" y2="490" stroke="#333"/>
+<text x="370" y="536" font-size="14" text-anchor="middle">Numero de hilos / procesos (unidades)</text>
+<text x="22" y="275" font-size="14" text-anchor="middle" transform="rotate(-90 22 275)">Tiempo (s)</text>
+<polyline points="122.9,82.6 155.9,47.7 221.8,42.9 353.5,71.8 485.3,66.5 617.1,68.7" fill="none" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="122.9" y1="85.8" x2="122.9" y2="78.1" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="122.9" cy="82.6" r="3.5" fill="#1f77b4"/>
+<line x1="155.9" y1="50.1" x2="155.9" y2="46.0" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="155.9" cy="47.7" r="3.5" fill="#1f77b4"/>
+<line x1="221.8" y1="45.1" x2="221.8" y2="41.1" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="221.8" cy="42.9" r="3.5" fill="#1f77b4"/>
+<line x1="353.5" y1="75.5" x2="353.5" y2="66.3" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="353.5" cy="71.8" r="3.5" fill="#1f77b4"/>
+<line x1="485.3" y1="69.0" x2="485.3" y2="64.3" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="485.3" cy="66.5" r="3.5" fill="#1f77b4"/>
+<line x1="617.1" y1="71.3" x2="617.1" y2="65.4" stroke="#1f77b4" stroke-width="1.5"/>
+<circle cx="617.1" cy="68.7" r="3.5" fill="#1f77b4"/>
+<polyline points="122.9,84.2 155.9,280.0 221.8,377.0 353.5,407.9 485.3,415.8 617.1,416.1" fill="none" stroke="#d62728" stroke-width="2.5"/>
+<line x1="122.9" y1="85.1" x2="122.9" y2="83.3" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="122.9" cy="84.2" r="3.5" fill="#d62728"/>
+<line x1="155.9" y1="281.2" x2="155.9" y2="277.6" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="155.9" cy="280.0" r="3.5" fill="#d62728"/>
+<line x1="221.8" y1="381.5" x2="221.8" y2="369.2" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="221.8" cy="377.0" r="3.5" fill="#d62728"/>
+<line x1="353.5" y1="411.8" x2="353.5" y2="403.4" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="353.5" cy="407.9" r="3.5" fill="#d62728"/>
+<line x1="485.3" y1="417.5" x2="485.3" y2="412.5" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="485.3" cy="415.8" r="3.5" fill="#d62728"/>
+<line x1="617.1" y1="419.3" x2="617.1" y2="414.4" stroke="#d62728" stroke-width="1.5"/>
+<circle cx="617.1" cy="416.1" r="3.5" fill="#d62728"/>
+<line x1="668" y1="80" x2="698" y2="80" stroke="#1f77b4" stroke-width="2.5"/>
+<text x="706" y="84" font-size="13">Hilos (threading, GIL)</text>
+<line x1="668" y1="106" x2="698" y2="106" stroke="#d62728" stroke-width="2.5"/>
+<text x="706" y="110" font-size="13">Procesos (fork)</text>
+</svg>
